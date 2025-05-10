@@ -1,10 +1,12 @@
 import BBSCardList from "./components/layouts/BBSCardList";
-import prisma from "@/lib/prismaClient";
 
 export default async function Home() {
-  const response = await fetch("http:localhost:3000/api/post", {
-    next: { revalidate: 3600 },
+  const response = await fetch("http://localhost:3000/api/post", {
+    cache: "no-store",
   });
+
+  const bbsAllData = await response.json();
+  console.log(bbsAllData);
 
   return (
     <main>

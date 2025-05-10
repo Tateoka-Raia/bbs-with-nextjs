@@ -1,4 +1,4 @@
-import BBSCard from "../BBSCard";
+import BBSCard from "./BBSCard";
 
 const BBSCardList = () => {
   return (
