@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Link } from "lucide-react";
+import Link from "next/link";
 
 interface BBSCardProps {
   data: BBSData;
@@ -24,7 +24,7 @@ const BBSCard = ({ data }: BBSCardProps) => {
       <CardContent>{content}</CardContent>
       <CardFooter className="flex justify-between">
         <Link href={`/bbs-posts/${id}`} className="text-blue-500">
-          Link
+          Read More
         </Link>
       </CardFooter>
     </Card>
